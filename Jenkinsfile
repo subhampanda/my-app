@@ -1,9 +1,9 @@
 node{
     stage('SCM checkout'){
-     git ''
+     git 'https://github.com/subhampanda/my-app.git'
     
     }
-
-
+    stage('compile-package')
+    sh 'mvn package'
 
 }
